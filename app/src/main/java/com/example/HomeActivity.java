@@ -13,6 +13,7 @@ import android.os.Looper;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
 import android.view.View;
@@ -72,6 +73,7 @@ public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(TutorEarnApplication.STARTUP_LOG_TAG, "Stage 7: HomeActivity.onCreate() started");
         EdgeToEdge.enable(
                 this,
                 SystemBarStyle.dark(Color.TRANSPARENT),
@@ -94,6 +96,10 @@ public class HomeActivity extends AppCompatActivity {
         setupFeatureCards();
         setupPromoCarousel();
         animateEntrance();
+        binding.getRoot().post(() -> Log.i(
+                TutorEarnApplication.STARTUP_LOG_TAG,
+                "Stage 8: HomeActivity main screen visible"
+        ));
     }
 
     private void applySystemBarInsets() {
@@ -430,6 +436,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        Log.i(TutorEarnApplication.STARTUP_LOG_TAG, "Stage 8: HomeActivity.onResume() active");
         startAutoSlideTimer();
         if (coinBalanceRepository != null) {
             coinBalanceRepository.refreshBalance();

@@ -12,6 +12,7 @@ import android.os.Looper;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 
@@ -46,6 +47,7 @@ public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(TutorEarnApplication.STARTUP_LOG_TAG, "SplashActivity.onCreate() started");
         EdgeToEdge.enable(
                 this,
                 SystemBarStyle.dark(Color.TRANSPARENT),
@@ -61,6 +63,12 @@ public class SplashActivity extends AppCompatActivity {
         startSplashAnimations();
 
         navigationHandler.postDelayed(navigateToHomeRunnable, SPLASH_DURATION_MS);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i(TutorEarnApplication.STARTUP_LOG_TAG, "SplashActivity.onResume() visible");
     }
 
     private void applySystemBarInsets() {
@@ -152,6 +160,7 @@ public class SplashActivity extends AppCompatActivity {
             return;
         }
         hasNavigated = true;
+        Log.i(TutorEarnApplication.STARTUP_LOG_TAG, "SplashActivity navigating to HomeActivity");
 
         Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
         startActivity(intent);

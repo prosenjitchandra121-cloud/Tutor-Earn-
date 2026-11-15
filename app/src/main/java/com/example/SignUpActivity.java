@@ -15,6 +15,7 @@ import android.text.Spanned;
 import android.text.TextWatcher;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
@@ -51,6 +52,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(TutorEarnApplication.STARTUP_LOG_TAG, "SignUpActivity.onCreate() started");
         EdgeToEdge.enable(
                 this,
                 SystemBarStyle.dark(Color.TRANSPARENT),
@@ -67,6 +69,16 @@ public class SignUpActivity extends AppCompatActivity {
         setupInputListeners();
         setupCreateAccountButton();
         startAnimations();
+        binding.getRoot().post(() -> Log.i(
+                TutorEarnApplication.STARTUP_LOG_TAG,
+                "SignUpActivity first frame laid out and visible"
+        ));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i(TutorEarnApplication.STARTUP_LOG_TAG, "SignUpActivity.onResume() active");
     }
 
     private void applySystemAndImeInsets() {
@@ -390,6 +402,7 @@ public class SignUpActivity extends AppCompatActivity {
             return;
         }
         isNavigating = true;
+        Log.i(TutorEarnApplication.STARTUP_LOG_TAG, "SignUpActivity navigating to HomeActivity");
 
         Intent intent = new Intent(SignUpActivity.this, HomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

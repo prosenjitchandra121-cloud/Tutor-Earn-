@@ -1,6 +1,7 @@
 package com.example;
 
 import android.content.Context;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -66,7 +67,11 @@ public interface AuthGateway {
 
         public FirebaseAuthGateway(@NonNull Context context) {
             this.appContext = context.getApplicationContext();
-            TutorEarnApplication.ensureFirebaseInitialized(this.appContext);
+            try {
+                TutorEarnApplication.ensureFirebaseInitialized(this.appContext);
+            } catch (Throwable t) {
+                Log.e(TutorEarnApplication.STARTUP_LOG_TAG, "FirebaseAuthGateway initialization failed", t);
+            }
         }
 
         @Override
@@ -92,6 +97,7 @@ public interface AuthGateway {
                             }
                         });
             } catch (Throwable t) {
+                Log.e(TutorEarnApplication.STARTUP_LOG_TAG, "FirebaseAuth signIn failed", t);
                 callback.onError(t.getLocalizedMessage() != null
                         ? t.getLocalizedMessage()
                         : appContext.getString(R.string.error_firebase_auth_failed));
@@ -140,6 +146,7 @@ public interface AuthGateway {
                 TutorEarnApplication.ensureFirebaseInitialized(appContext);
                 return FirebaseAuth.getInstance().getCurrentUser() != null;
             } catch (Throwable t) {
+                Log.e(TutorEarnApplication.STARTUP_LOG_TAG, "FirebaseAuth isUserSignedIn check failed", t);
                 return false;
             }
         }

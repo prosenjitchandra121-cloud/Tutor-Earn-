@@ -157,6 +157,12 @@ public class PrimeSurveyAdManager {
                 @NonNull String adUnitId,
                 @NonNull InterstitialLoadCallback callback
         ) {
+            if (!TutorEarnApplication.hasConfiguredAdMobAppId(context)) {
+                Log.w(TutorEarnApplication.STARTUP_LOG_TAG,
+                        "PrimeSurvey Interstitial load skipped: AdMob APPLICATION_ID is not configured.");
+                callback.onFailed("AdMob Application ID is not configured.", -1);
+                return;
+            }
             try {
                 AdRequest adRequest = new AdRequest.Builder().build();
                 InterstitialAd.load(
@@ -195,6 +201,12 @@ public class PrimeSurveyAdManager {
     };
 
     private static final RewardedDriver REAL_REWARDED_DRIVER = (context, adUnitId, callback) -> {
+        if (!TutorEarnApplication.hasConfiguredAdMobAppId(context)) {
+            Log.w(TutorEarnApplication.STARTUP_LOG_TAG,
+                    "PrimeSurvey Rewarded load skipped: AdMob APPLICATION_ID is not configured.");
+            callback.onFailed("AdMob Application ID is not configured.", -1);
+            return;
+        }
         try {
             AdRequest adRequest = new AdRequest.Builder().build();
             RewardedAd.load(

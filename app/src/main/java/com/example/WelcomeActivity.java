@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
 import android.view.View;
@@ -42,6 +43,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(TutorEarnApplication.STARTUP_LOG_TAG, "Stage 4: WelcomeActivity.onCreate() started");
         EdgeToEdge.enable(
                 this,
                 SystemBarStyle.dark(Color.TRANSPARENT),
@@ -51,11 +53,16 @@ public class WelcomeActivity extends AppCompatActivity {
 
         binding = ActivityWelcomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        Log.i(TutorEarnApplication.STARTUP_LOG_TAG, "Stage 4: WelcomeActivity layout inflated");
 
         applySystemBarInsets();
         styleSubtitleDots();
         setupGetStartedButton();
         startEntranceAndAmbientAnimations();
+        binding.getRoot().post(() -> Log.i(
+                TutorEarnApplication.STARTUP_LOG_TAG,
+                "Stage 5: WelcomeActivity first frame laid out and visible"
+        ));
     }
 
     private void applySystemBarInsets() {
@@ -211,6 +218,8 @@ public class WelcomeActivity extends AppCompatActivity {
         Class<?> destination = AuthGateway.Holder.get(this).isUserSignedIn()
                 ? HomeActivity.class
                 : LoginActivity.class;
+        Log.i(TutorEarnApplication.STARTUP_LOG_TAG,
+                "Stage 6: WelcomeActivity navigating to " + destination.getSimpleName());
         Intent intent = new Intent(WelcomeActivity.this, destination);
         startActivity(intent);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
@@ -228,6 +237,7 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         isNavigating = false;
+        Log.i(TutorEarnApplication.STARTUP_LOG_TAG, "Stage 5: WelcomeActivity.onResume() active");
     }
 
     @SuppressWarnings("deprecation")

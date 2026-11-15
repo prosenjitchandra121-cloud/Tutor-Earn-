@@ -1768,4 +1768,146 @@ public class TutorEarnRobolectricTest {
         assertEquals(2L, (long) remoteClaimsCount.get("uid_alpha"));
         assertEquals(1000L, (long) remoteCoinsEarned.get("uid_alpha"));
     }
+
+    @Test
+    public void releaseManifestRemovesMobileAdsInitProviderAndHandlesEmptyAdMobAppIdSafely() throws Exception {
+        Context context = ApplicationProvider.getApplicationContext();
+        PackageManager pm = context.getPackageManager();
+        android.content.pm.PackageInfo pkgInfo = pm.getPackageInfo(
+                context.getPackageName(),
+                PackageManager.GET_PROVIDERS | PackageManager.GET_META_DATA
+        );
+
+        // Verify MobileAdsInitProvider was removed from merged manifest so release builds never crash before Application.onCreate()
+        if (pkgInfo.providers != null) {
+            for (android.content.pm.ProviderInfo provider : pkgInfo.providers) {
+                org.junit.Assert.assertFalse(
+                        "MobileAdsInitProvider must be removed to prevent pre-startup crash when ADMOB_APP_ID is empty",
+                        "com.google.android.gms.ads.MobileAdsInitProvider".equals(provider.name)
+                );
+            }
+        }
+
+        org.junit.Assert.assertTrue(TutorEarnApplication.hasConfiguredAdMobAppId(context));
+
+        android.content.pm.PackageInfo mutablePkgInfo =
+                Shadows.shadowOf(pm).getInternalMutablePackageInfo(context.getPackageName());
+        String originalAppId = mutablePkgInfo.applicationInfo.metaData.getString("com.google.android.gms.ads.APPLICATION_ID");
+        try {
+            // Simulate Release build where ADMOB_APP_ID secret is empty ("")
+            mutablePkgInfo.applicationInfo.metaData.putString("com.google.android.gms.ads.APPLICATION_ID", "");
+            org.junit.Assert.assertFalse(TutorEarnApplication.hasConfiguredAdMobAppId(context));
+
+            org.robolectric.shadows.ShadowLog.clear();
+            TutorEarnApplication.resetMobileAdsForTest();
+            TutorEarnApplication app = ApplicationProvider.getApplicationContext();
+            app.onCreate();
+            Shadows.shadowOf(Looper.getMainLooper()).idle();
+            org.junit.Assert.assertTrue(TutorEarnApplication.isMobileAdsInitialized());
+
+            // Verify real AdMob ad managers fail gracefully instead of crashing when App ID is unconfigured
+            final String[] interstitialFailure = {null};
+            PrimeSurveyAdManager primeAdManager = new PrimeSurveyAdManager(context);
+            WelcomeActivity welcomeActivity = Robolectric.buildActivity(WelcomeActivity.class)
+                    .create()
+                    .start()
+                    .resume()
+                    .get();
+            primeAdManager.showOrLoadInterstitialForQuestion(
+                    welcomeActivity,
+                    2,
+                    new PrimeSurveyAdManager.InterstitialFlowListener() {
+                        @Override
+                        public void onAdLoading() {
+                        }
+
+                        @Override
+                        public void onAdDismissed() {
+                        }
+
+                        @Override
+                        public void onAdLoadFailed(@androidx.annotation.NonNull String errorMessage, int attemptCount) {
+                            interstitialFailure[0] = errorMessage;
+                        }
+                    }
+            );
+            Shadows.shadowOf(Looper.getMainLooper()).idle();
+            assertNotNull(interstitialFailure[0]);
+            primeAdManager.destroy();
+
+            final String[] rewardedFailure = {null};
+            SurveyRewardsAdManager surveyRewardsAdManager = new SurveyRewardsAdManager(context);
+            surveyRewardsAdManager.loadAndShowRewardedAd(
+                    welcomeActivity,
+                    new SurveyRewardsAdManager.RewardedAdOutcomeListener() {
+                        @Override
+                        public void onLoadingStarted() {
+                        }
+
+                        @Override
+                        public void onRewardVerified() {
+                        }
+
+                        @Override
+                        public void onRewardNotEarned() {
+                        }
+
+                        @Override
+                        public void onAdUnavailableOrFailed(@androidx.annotation.NonNull String reason) {
+                            rewardedFailure[0] = reason;
+                        }
+                    }
+            );
+            Shadows.shadowOf(Looper.getMainLooper()).idle();
+            assertNotNull(rewardedFailure[0]);
+            surveyRewardsAdManager.destroy();
+
+            // Verify WelcomeActivity -> LoginActivity -> HomeActivity flow completes cleanly without crashing
+            welcomeActivity.findViewById(R.id.btn_get_started).performClick();
+            Intent nextIntent = Shadows.shadowOf(welcomeActivity).getNextStartedActivity();
+            assertNotNull(nextIntent);
+            assertEquals(LoginActivity.class.getName(), nextIntent.getComponent().getClassName());
+
+            LoginActivity loginActivity = Robolectric.buildActivity(LoginActivity.class)
+                    .create()
+                    .start()
+                    .resume()
+                    .get();
+            ((android.widget.EditText) loginActivity.findViewById(R.id.et_login_email))
+                    .setText("student@tutorearn.com");
+            ((android.widget.EditText) loginActivity.findViewById(R.id.et_login_password))
+                    .setText("secret123");
+            loginActivity.findViewById(R.id.btn_login).performClick();
+            Intent homeIntent = Shadows.shadowOf(loginActivity).getNextStartedActivity();
+            assertNotNull(homeIntent);
+            assertEquals(HomeActivity.class.getName(), homeIntent.getComponent().getClassName());
+
+            HomeActivity homeActivity = Robolectric.buildActivity(HomeActivity.class)
+                    .create()
+                    .start()
+                    .resume()
+                    .get();
+            Shadows.shadowOf(Looper.getMainLooper()).idle();
+            assertNotNull(homeActivity.findViewById(R.id.card_prime_survey));
+
+            java.util.List<org.robolectric.shadows.ShadowLog.LogItem> startupLogs =
+                    org.robolectric.shadows.ShadowLog.getLogsForTag(TutorEarnApplication.STARTUP_LOG_TAG);
+            java.util.List<String> messages = new java.util.ArrayList<>();
+            for (org.robolectric.shadows.ShadowLog.LogItem item : startupLogs) {
+                messages.add(item.msg);
+            }
+            String combinedLogs = String.join("\n", messages);
+            org.junit.Assert.assertTrue(combinedLogs.contains("Stage 1: Application.onCreate() started"));
+            org.junit.Assert.assertTrue(combinedLogs.contains("Stage 2: Firebase initialized"));
+            org.junit.Assert.assertTrue(combinedLogs.contains("Stage 3: AdMob APPLICATION_ID meta-data is missing or invalid"));
+            org.junit.Assert.assertTrue(combinedLogs.contains("Stage 4: WelcomeActivity.onCreate() started"));
+            org.junit.Assert.assertTrue(combinedLogs.contains("Stage 5: WelcomeActivity.onResume() active"));
+            org.junit.Assert.assertTrue(combinedLogs.contains("Stage 6: WelcomeActivity navigating to LoginActivity"));
+            org.junit.Assert.assertTrue(combinedLogs.contains("Stage 7: HomeActivity.onCreate() started"));
+            org.junit.Assert.assertTrue(combinedLogs.contains("Stage 8: HomeActivity.onResume() active"));
+        } finally {
+            mutablePkgInfo.applicationInfo.metaData.putString("com.google.android.gms.ads.APPLICATION_ID", originalAppId);
+            TutorEarnApplication.resetMobileAdsForTest();
+        }
+    }
 }

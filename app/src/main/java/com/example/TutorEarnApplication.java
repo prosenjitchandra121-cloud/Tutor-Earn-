@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.regex.Pattern;
 
 /**
  * Application entry point for Tutor Earn.
@@ -30,7 +31,10 @@ import java.util.concurrent.Executors;
 public class TutorEarnApplication extends Application {
 
     private static final String TAG = "TutorEarnApplication";
+    public static final String STARTUP_LOG_TAG = "TutorEarnStartup";
     private static final String ADMOB_APP_ID_META_KEY = "com.google.android.gms.ads.APPLICATION_ID";
+    private static final Pattern ADMOB_APP_ID_PATTERN =
+            Pattern.compile("^ca-app-pub-[0-9]{16}~[0-9]{10}$");
 
     private static final Object AD_INIT_LOCK = new Object();
     private static final Handler MAIN_HANDLER = new Handler(Looper.getMainLooper());
@@ -86,9 +90,47 @@ public class TutorEarnApplication extends Application {
 
     @Override
     public void onCreate() {
+        installStartupCrashDiagnostics();
+        Log.i(STARTUP_LOG_TAG, "Stage 1: Application.onCreate() started (package="
+                + getPackageName()
+                + ", versionName=" + BuildConfig.VERSION_NAME
+                + ", versionCode=" + BuildConfig.VERSION_CODE
+                + ", testAdMode=" + BuildConfig.IS_TEST_AD_MODE + ")");
         super.onCreate();
-        ensureFirebaseInitialized(this);
+        try {
+            FirebaseApp app = ensureFirebaseInitialized(this);
+            Log.i(STARTUP_LOG_TAG, "Stage 2: Firebase initialized (name=" + app.getName()
+                    + ", projectId=" + app.getOptions().getProjectId() + ")");
+        } catch (Throwable t) {
+            Log.e(STARTUP_LOG_TAG, "Stage 2: Firebase initialization failed without blocking UI", t);
+        }
         ensureMobileAdsInitialized(this, null);
+        Log.i(STARTUP_LOG_TAG, "Stage 1: Application.onCreate() finished");
+    }
+
+    private static void installStartupCrashDiagnostics() {
+        Thread.UncaughtExceptionHandler existing = Thread.getDefaultUncaughtExceptionHandler();
+        if (existing instanceof StartupDiagnosticExceptionHandler) {
+            return;
+        }
+        Thread.setDefaultUncaughtExceptionHandler(new StartupDiagnosticExceptionHandler(existing));
+    }
+
+    private static final class StartupDiagnosticExceptionHandler implements Thread.UncaughtExceptionHandler {
+        @Nullable
+        private final Thread.UncaughtExceptionHandler delegate;
+
+        StartupDiagnosticExceptionHandler(@Nullable Thread.UncaughtExceptionHandler delegate) {
+            this.delegate = delegate;
+        }
+
+        @Override
+        public void uncaughtException(@NonNull Thread thread, @NonNull Throwable throwable) {
+            Log.e(STARTUP_LOG_TAG, "FATAL UNCAUGHT EXCEPTION on thread=" + thread.getName(), throwable);
+            if (delegate != null) {
+                delegate.uncaughtException(thread, throwable);
+            }
+        }
     }
 
     /**
@@ -122,11 +164,13 @@ public class TutorEarnApplication extends Application {
         }
 
         if (driver == REAL_MOBILE_ADS_INIT_DRIVER && !hasConfiguredAdMobAppId(appContext)) {
-            Log.w(TAG, "AdMob Application ID meta-data is empty; skipping MobileAds.initialize().");
+            Log.w(STARTUP_LOG_TAG,
+                    "Stage 3: AdMob APPLICATION_ID meta-data is missing or invalid; skipping MobileAds.initialize() safely.");
             completeMobileAdsInitialization();
             return;
         }
 
+        Log.i(STARTUP_LOG_TAG, "Stage 3: Starting asynchronous MobileAds initialization");
         shouldStartInit = true;
         if (shouldStartInit) {
             driver.initialize(appContext, TutorEarnApplication::completeMobileAdsInitialization);
@@ -181,7 +225,7 @@ public class TutorEarnApplication extends Application {
                 return false;
             }
             String appId = metaData.getString(ADMOB_APP_ID_META_KEY);
-            return appId != null && !appId.trim().isEmpty();
+            return appId != null && ADMOB_APP_ID_PATTERN.matcher(appId.trim()).matches();
         } catch (Throwable t) {
             return false;
         }
