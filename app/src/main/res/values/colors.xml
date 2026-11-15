@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Deep Cosmic Navy & Royal Purple Brand Palette -->
+    <color name="navy_deep">#040724</color>
+    <color name="navy_mid">#0A1452</color>
+    <color name="royal_purple_deep">#1F0B54</color>
+    <color name="royal_blue_bright">#1D4ED8</color>
+    <color name="electric_cyan">#00D4FF</color>
+
+    <!-- Gold Accents -->
+    <color name="gold_primary">#FFD028</color>
+    <color name="gold_bright">#FFE45E</color>
+    <color name="gold_deep">#F59E0B</color>
+
+    <!-- Text & Glassmorphism Surfaces -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="text_subtitle">#E2E8F0</color>
+    <color name="glass_border_light">#8CFFFFFF</color>
+    <color name="glass_surface_subtle">#1AFFFFFF</color>
+
+    <!-- Feature Card Gradients -->
+    <!-- 1. Prime Survey: Cyan -> Electric Blue -> Royal Cobalt -->
+    <color name="prime_survey_start">#0CE0FF</color>
+    <color name="prime_survey_center">#1772FA</color>
+    <color name="prime_survey_end">#0434B8</color>
+    <color name="prime_survey_glow">#5500D4FF</color>
+
+    <!-- 2. Survey Rewards: Neon Magenta -> Vivid Violet -> Deep Royal Purple -->
+    <color name="survey_rewards_start">#E242FF</color>
+    <color name="survey_rewards_center">#8B1DF6</color>
+    <color name="survey_rewards_end">#4C0DB3</color>
+    <color name="survey_rewards_glow">#55D946EF</color>
+
+    <!-- 3. Read and Rewards: Fresh Lime -> Emerald -> Deep Forest -->
+    <color name="read_rewards_start">#6DF23D</color>
+    <color name="read_rewards_center">#10BA4C</color>
+    <color name="read_rewards_end">#037830</color>
+    <color name="read_rewards_glow">#5522C55E</color>
+
+    <!-- 4. Earn With AI: Sunlit Gold -> Vibrant Amber -> Deep Tangerine -->
+    <color name="earn_ai_start">#FFE033</color>
+    <color name="earn_ai_center">#FF8D0A</color>
+    <color name="earn_ai_end">#D94608</color>
+    <color name="earn_ai_glow">#55F59E0B</color>
+
+    <!-- Auth Screens (Login / Sign Up) -->
+    <color name="auth_input_bg">#29182678</color>
+    <color name="auth_hint">#94A3B8</color>
+    <color name="auth_icon_tint">#7DD3FC</color>
+    <color name="auth_error">#FF6B81</color>
+
+    <!-- Prime Survey -->
+    <color name="survey_card_bg">#29131F63</color>
+    <color name="survey_option_bg">#241C2E80</color>
+    <color name="survey_option_border">#597DD3FC</color>
+    <color name="survey_option_correct_bg">#3810B981</color>
+    <color name="survey_option_correct_border">#22C55E</color>
+    <color name="survey_option_wrong_bg">#38EF4444</color>
+    <color name="survey_option_wrong_border">#FF6B81</color>
+    <color name="survey_progress_track">#2EFFFFFF</color>
+    <color name="survey_badge_bg">#2B00D4FF</color>
+    <color name="survey_gold_badge_bg">#2BFFCF28</color>
+    <color name="emerald_bright">#34D399</color>
+</resources>

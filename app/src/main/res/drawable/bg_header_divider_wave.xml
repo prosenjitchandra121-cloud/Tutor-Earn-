@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="34dp"
+    android:viewportWidth="360"
+    android:viewportHeight="34">
+    <!-- Soft royal blue curved sweep line -->
+    <path
+        android:fillColor="#4D38BDF8"
+        android:pathData="M0,26 C115,31 245,21 360,2 L360,6 C245,25 115,33 0,27 Z" />
+    <!-- Bright golden ribbon sweep under header -->
+    <path
+        android:fillColor="#FFD028"
+        android:pathData="M24,30 C130,31 250,22 360,3 L360,15 C255,28 135,32 24,30 Z" />
+</vector>

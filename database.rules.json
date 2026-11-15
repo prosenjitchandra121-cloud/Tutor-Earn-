@@ -1,0 +1,65 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        "profile": {
+          ".write": "auth != null && auth.uid === $uid",
+          ".validate": "newData.hasChildren()"
+        },
+        "coins": {
+          "balance": {
+            ".write": "auth != null && auth.uid === $uid",
+            ".validate": "newData.isNumber() && newData.val() >= 0 && (!data.exists() ? (newData.val() === 0 || newData.val() === 500 || newData.val() === 1050 || (data.parent().parent().child('coinBalance').exists() && (newData.val() === data.parent().parent().child('coinBalance').val() + 500 || newData.val() === data.parent().parent().child('coinBalance').val() + 1050))) : (newData.val() > data.val() && newData.val() <= data.val() + 1050))"
+          }
+        },
+        "coinTransactions": {
+          "$transactionId": {
+            ".write": "auth != null && auth.uid === $uid && !data.exists()",
+            ".validate": "newData.hasChildren(['transactionId', 'source', 'amount', 'verified', 'balanceAfter', 'createdAt']) && newData.child('transactionId').val() === $transactionId && (newData.child('source').val() === 'prime_survey' || newData.child('source').val() === 'survey_rewards' || newData.child('source').val() === 'read_and_rewards' || newData.child('source').val() === 'earn_with_ai') && newData.child('verified').val() === true && newData.child('amount').isNumber() && (newData.child('source').val() !== 'prime_survey' || newData.child('amount').val() === 1050) && (newData.child('source').val() !== 'survey_rewards' || newData.child('amount').val() === 500) && newData.child('amount').val() > 0 && newData.child('balanceAfter').isNumber() && newData.child('createdAt').val() <= now"
+          }
+        },
+        "coinBalance": {
+          ".write": "auth != null && auth.uid === $uid",
+          ".validate": "newData.isNumber() && (!data.exists() ? (newData.val() === 0 || newData.val() === 1050) : newData.val() === data.val() + 1050)"
+        },
+        "primeSurvey": {
+          "lastClaimTimestamp": {
+            ".write": "auth != null && auth.uid === $uid",
+            ".validate": "newData.isNumber() && newData.val() <= now && (!data.exists() || newData.val() - data.val() >= 86400000)"
+          },
+          "claims": {
+            "$transactionId": {
+              ".write": "auth != null && auth.uid === $uid && !data.exists()",
+              ".validate": "newData.hasChildren(['transactionId', 'surveyType', 'amount', 'claimedAt']) && newData.child('amount').val() === 1050 && newData.child('surveyType').val() === 'prime_survey' && newData.child('claimedAt').val() <= now"
+            }
+          }
+        },
+        "surveyRewards": {
+          "lastClaimAt": {
+            ".write": "auth != null && auth.uid === $uid",
+            ".validate": "newData.isNumber() && newData.val() <= now && (!data.exists() || newData.val() - data.val() >= 86400000)"
+          },
+          "nextClaimAt": {
+            ".write": "auth != null && auth.uid === $uid",
+            ".validate": "newData.isNumber()"
+          },
+          "totalClaims": {
+            ".write": "auth != null && auth.uid === $uid",
+            ".validate": "newData.isNumber() && newData.val() >= 0"
+          },
+          "totalCoinsEarned": {
+            ".write": "auth != null && auth.uid === $uid",
+            ".validate": "newData.isNumber() && newData.val() >= 0"
+          },
+          "claims": {
+            "$transactionId": {
+              ".write": "auth != null && auth.uid === $uid && !data.exists()",
+              ".validate": "newData.hasChildren(['transactionId', 'amount', 'claimedAt']) && newData.child('amount').val() === 500 && newData.child('claimedAt').val() <= now"
+            }
+          }
+        }
+      }
+    }
+  }
+}

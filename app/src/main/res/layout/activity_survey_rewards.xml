@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/survey_rewards_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_gradient"
+    tools:context=".SurveyRewardsActivity">
+
+    <!-- Top and bottom decorative waves matching Tutor Earn identity -->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:alpha="0.58"
+        android:importantForAccessibility="no"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_wave_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:alpha="0.78"
+        android:importantForAccessibility="no"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_wave_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/survey_rewards_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/survey_rewards_content_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="28dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/survey_rewards_responsive_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="wrap"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="520dp">
+
+                <!-- Minimal Back Navigation -->
+                <FrameLayout
+                    android:id="@+id/btn_survey_rewards_back"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:contentDescription="@string/cd_survey_rewards_back"
+                    android:focusable="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <FrameLayout
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_arrow_glass_pill">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_chevron_left" />
+                    </FrameLayout>
+                </FrameLayout>
+
+                <!-- Single Premium Survey Rewards Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_survey_reward"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="26dp"
+                    app:cardElevation="14dp"
+                    app:strokeWidth="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_survey_rewards_back"
+                    app:layout_constraintVertical_bias="0.42">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_survey_rewards_card"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="26dp"
+                        android:paddingTop="32dp"
+                        android:paddingBottom="30dp">
+
+                        <!-- Golden Coin Icon with Subtle Halo Glow -->
+                        <FrameLayout
+                            android:layout_width="104dp"
+                            android:layout_height="104dp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false">
+
+                            <View
+                                android:id="@+id/iv_survey_reward_coin_glow"
+                                android:layout_width="96dp"
+                                android:layout_height="96dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_coin_glow_aura" />
+
+                            <ImageView
+                                android:id="@+id/iv_survey_reward_coin"
+                                android:layout_width="76dp"
+                                android:layout_height="76dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/cd_survey_rewards_coin"
+                                android:src="@drawable/ic_coin_gold" />
+                        </FrameLayout>
+
+                        <!-- Title: Survey Rewards -->
+                        <TextView
+                            android:id="@+id/tv_survey_rewards_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:text="@string/survey_rewards_title"
+                            android:textColor="@color/gold_primary"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <!-- Exactly One Sentence -->
+                        <TextView
+                            android:id="@+id/tv_survey_rewards_sentence"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4dp"
+                            android:text="@string/survey_rewards_sentence"
+                            android:textColor="@color/text_subtitle"
+                            android:textSize="15sp" />
+
+                        <!-- Status / Success Message (Shown after Claim action) -->
+                        <TextView
+                            android:id="@+id/tv_survey_reward_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:fontFamily="@font/poppins"
+                            android:gravity="center"
+                            android:paddingHorizontal="14dp"
+                            android:paddingVertical="10dp"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            tools:text="500 Coins Added Successfully!" />
+
+                        <!-- 24-Hour Cooldown Timer -->
+                        <TextView
+                            android:id="@+id/tv_survey_rewards_cooldown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins"
+                            android:gravity="center"
+                            android:textColor="@color/gold_primary"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            tools:text="Available again in 23:59:59" />
+
+                        <!-- Prominent Golden CLAIM Button -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false">
+
+                            <View
+                                android:id="@+id/btn_claim_survey_reward_glow"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:layout_gravity="center"
+                                android:layout_marginHorizontal="6dp"
+                                android:background="@drawable/bg_btn_glow_aura"
+                                android:scaleX="1.03"
+                                android:scaleY="1.20" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/btn_claim_survey_reward"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardBackgroundColor="@android:color/transparent"
+                                app:cardCornerRadius="28dp"
+                                app:cardElevation="10dp"
+                                app:rippleColor="#4DFFFFFF"
+                                app:strokeWidth="0dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/bg_btn_get_started"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:paddingHorizontal="20dp">
+
+                                    <ProgressBar
+                                        android:id="@+id/claim_survey_reward_progress"
+                                        style="?android:attr/progressBarStyleSmall"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:indeterminateTint="@color/navy_deep"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/btn_claim_survey_reward_text"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat"
+                                        android:letterSpacing="0.06"
+                                        android:text="@string/survey_rewards_claim_button"
+                                        android:textColor="@color/navy_deep"
+                                        android:textSize="17sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+                        </FrameLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

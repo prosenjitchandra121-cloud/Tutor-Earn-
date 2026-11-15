@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.TutorEarn" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/royal_blue_bright</item>
+        <item name="colorSecondary">@color/gold_primary</item>
+        <item name="android:windowBackground">@color/navy_deep</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.TutorEarn.Splash" parent="Theme.TutorEarn">
+        <item name="android:windowBackground">@drawable/bg_splash_gradient</item>
+    </style>
+
+    <style name="Widget.TutorEarn.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxBackgroundColor">@color/auth_input_bg</item>
+        <item name="boxStrokeColor">@color/auth_input_stroke</item>
+        <item name="boxStrokeWidth">1.2dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="hintTextColor">@color/gold_primary</item>
+        <item name="android:textColorHint">@color/auth_hint</item>
+        <item name="startIconTint">@color/auth_icon_tint</item>
+        <item name="endIconTint">@color/text_subtitle</item>
+        <item name="errorEnabled">true</item>
+        <item name="errorTextColor">@color/auth_error</item>
+        <item name="boxStrokeErrorColor">@color/auth_error</item>
+        <item name="errorIconTint">@color/auth_error</item>
+    </style>
+
+</resources>

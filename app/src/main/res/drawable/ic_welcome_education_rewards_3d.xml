@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Soft ambient cyan & gold starburst rays -->
+    <path
+        android:fillColor="#2638BDF8"
+        android:pathData="M100,14 L115,68 L172,50 L128,92 L176,126 L118,118 L100,174 L82,118 L24,126 L72,92 L28,50 L85,68 Z" />
+
+    <!-- Twinkling sparkles -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,42 L40.5,48.5 L47,51 L40.5,53.5 L38,60 L35.5,53.5 L29,51 L35.5,48.5 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M162,38 L164.2,43.8 L170,46 L164.2,48.2 L162,54 L159.8,48.2 L154,46 L159.8,43.8 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M26,104 L28,109 L33,111 L28,113 L26,118 L24,113 L19,111 L24,109 Z" />
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M168,144 L170,149 L175,151 L170,153 L168,158 L166,153 L161,151 L166,149 Z" />
+
+    <!-- Back half of glowing golden orbital ring -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M28,118 C28,96 60,82 100,82 C140,82 172,96 172,118"
+        android:strokeWidth="7"
+        android:strokeColor="#4DF59E0B"
+        android:strokeLineCap="round" />
+
+    <!-- Floating 3D Golden Reward Coin (Left) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M36,76 A14,14 0 1,1 35.99,76 Z" />
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M36,78.5 A11.5,11.5 0 1,1 35.99,78.5 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M36,82.5 L38.1,86.8 L42.8,87.5 L39.4,90.8 L40.2,95.5 L36,93.3 L31.8,95.5 L32.6,90.8 L29.2,87.5 L33.9,86.8 Z" />
+
+    <!-- Floating 3D Golden Reward Coin (Right) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M162,88 A13,13 0 1,1 161.99,88 Z" />
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M162,90.2 A10.8,10.8 0 1,1 161.99,90.2 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M162,94 L163.9,98 L168.3,98.6 L165.1,101.7 L165.9,106 L162,104 L158.1,106 L158.9,101.7 L155.7,98.6 L160.1,98 Z" />
+
+    <!-- Open book hard cover base (3D royal blue) -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M38,116 L100,134 L162,116 L154,146 L100,160 L46,146 Z" />
+    <path
+        android:fillColor="#2563EB"
+        android:pathData="M43,112 L100,129 L157,112 L150,140 L100,153 L50,140 Z" />
+
+    <!-- Book page depth layers -->
+    <path
+        android:fillColor="#93C5FD"
+        android:pathData="M46,108 C64,102 82,107 100,118 C118,107 136,102 154,108 L149,134 C132,129 116,133 100,144 C84,133 68,129 51,134 Z" />
+    <path
+        android:fillColor="#DBEAFE"
+        android:pathData="M49,102 C66,96 83,101 100,112 C117,101 134,96 151,102 L146,128 C131,123 115,127 100,138 C85,127 69,123 54,128 Z" />
+    <!-- Top glowing crisp white pages -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M53,96 C69,90 85,95 100,106 C115,95 131,90 147,96 L143,122 C129,117 114,121 100,132 C86,121 71,117 57,122 Z" />
+    <!-- Spine line -->
+    <path
+        android:fillColor="#60A5FA"
+        android:pathData="M99,106 L101,106 L101,132 L99,132 Z" />
+
+    <!-- Graduation cap crown (3D curved cylinder) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M66,64 L66,82 C66,91 81,97 100,97 C119,97 134,91 134,82 L134,64 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M66,64 L66,82 C66,89 76,94 90,96 L90,67 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:fillAlpha="0.20"
+        android:pathData="M71,79 C82,85 118,85 129,79 L129,83 C118,89 82,89 71,83 Z" />
+
+    <!-- Graduation cap mortarboard diamond -->
+    <path
+        android:fillColor="#0B1120"
+        android:pathData="M100,26 L164,54 L100,82 L36,54 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M100,29 L157,54 L100,78 L43,54 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:fillAlpha="0.26"
+        android:pathData="M100,30 L152,53 L100,58 L48,53 Z" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M37,54 L100,81 L163,54"
+        android:strokeWidth="2"
+        android:strokeColor="#60A5FA"
+        android:strokeAlpha="0.60" />
+
+    <!-- Cap center button & golden tassel -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M100,49 A5,5 0 1,1 99.99,49 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M100,50.5 A2.8,2.8 0 1,1 99.99,50.5 Z" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M100,53 L142,62 L142,89"
+        android:strokeWidth="3.6"
+        android:strokeColor="#FACC15"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M137,87 L147,87 L150,103 L134,103 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M140,87 L144,87 L145.5,103 L138.5,103 Z" />
+
+    <!-- Center hero golden star badge over book -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M100,90 A19,19 0 1,1 99.99,90 Z" />
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M100,93 A16,16 0 1,1 99.99,93 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M100,98 L103.5,105.2 L111.5,106.4 L105.7,112 L107.1,120 L100,116.2 L92.9,120 L94.3,112 L88.5,106.4 L96.5,105.2 Z" />
+
+    <!-- Front glowing golden orbital halo ring -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M22,120 C22,148 56,166 100,166 C144,166 178,148 178,120"
+        android:strokeWidth="10"
+        android:strokeColor="#4DF59E0B"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M24,120 C24,146 57,162 100,162 C143,162 176,146 176,120"
+        android:strokeWidth="5.2"
+        android:strokeColor="#F59E0B"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M28,121 C29,144 60,159 100,159 C140,159 171,144 172,121"
+        android:strokeWidth="2.5"
+        android:strokeColor="#FEF08A"
+        android:strokeLineCap="round" />
+
+</vector>

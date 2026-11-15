@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="112dp"
+    android:height="112dp"
+    android:viewportWidth="112"
+    android:viewportHeight="112">
+
+    <!-- Soft ambient circle -->
+    <path android:pathData="M56,10 A46,46 0 1,1 55.9,10 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="56"
+                android:centerY="56"
+                android:gradientRadius="46"
+                android:type="radial">
+                <item android:color="#55FFD028" android:offset="0" />
+                <item android:color="#00FFD028" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Trophy handles -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M34,32 C22,32 22,52 34,54"
+        android:strokeColor="#F59E0B"
+        android:strokeLineCap="round"
+        android:strokeWidth="5" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M78,32 C90,32 90,52 78,54"
+        android:strokeColor="#F59E0B"
+        android:strokeLineCap="round"
+        android:strokeWidth="5" />
+
+    <!-- Trophy cup -->
+    <path android:pathData="M34,24 L78,24 L74,52 C72,64 64,70 56,70 C48,70 40,64 38,52 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endX="78"
+                android:endY="70"
+                android:startX="34"
+                android:startY="24"
+                android:type="linear">
+                <item android:color="#FFE97D" android:offset="0" />
+                <item android:color="#FFD028" android:offset="0.5" />
+                <item android:color="#F59E0B" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Trophy stem and base -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M51,69 L61,69 L61,82 L51,82 Z" />
+    <path
+        android:fillColor="#FFD028"
+        android:pathData="M40,82 L72,82 L76,90 L36,90 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M34,90 L78,90 L78,95 L34,95 Z" />
+
+    <!-- Star highlight in trophy -->
+    <path
+        android:fillColor="#FFFBEB"
+        android:pathData="M56,34 L59.1,41.6 L67.3,42.3 L61.1,47.7 L63,55.8 L56,51.5 L49,55.8 L50.9,47.7 L44.7,42.3 L52.9,41.6 Z" />
+
+    <!-- Sparkles -->
+    <path
+        android:fillColor="#00D4FF"
+        android:pathData="M23,20 L25,25 L30,27 L25,29 L23,34 L21,29 L16,27 L21,25 Z" />
+    <path
+        android:fillColor="#FFE45E"
+        android:pathData="M90,18 L91.8,22 L96,23.8 L91.8,25.6 L90,29.6 L88.2,25.6 L84,23.8 L88.2,22 Z" />
+</vector>

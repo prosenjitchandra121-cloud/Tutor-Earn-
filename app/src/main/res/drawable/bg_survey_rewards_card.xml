@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Luminous Golden & Royal Purple Outer Border -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="26dp" />
+            <gradient
+                android:angle="135"
+                android:startColor="#FFFFD028"
+                android:centerColor="#FF8B1DF6"
+                android:endColor="#FFFFE45E"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <!-- Deep Navy Blue & Royal Purple Inner Card Surface -->
+    <item
+        android:bottom="1.6dp"
+        android:left="1.6dp"
+        android:right="1.6dp"
+        android:top="1.6dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="24.5dp" />
+            <gradient
+                android:angle="135"
+                android:startColor="#FF0A1452"
+                android:centerColor="#FF1F0B54"
+                android:endColor="#FF060C36"
+                android:type="linear" />
+        </shape>
+    </item>
+</layer-list>

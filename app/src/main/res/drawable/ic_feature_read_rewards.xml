@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+    <!-- Subtle radiant glow rays behind book -->
+    <path
+        android:fillColor="#24FFFFFF"
+        android:pathData="M48,8 L55,34 L82,24 L62,46 L86,62 L58,60 L48,86 L38,60 L10,62 L34,46 L14,24 L41,34 Z" />
+
+    <!-- Book bottom shadow -->
+    <path
+        android:fillColor="#33023816"
+        android:pathData="M48,73 A36,7 0 1,1 47.99,73 Z" />
+
+    <!-- Open book 3D royal blue hard cover -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M10,30 L45,38 L80,30 L78,70 L45,78 L12,70 Z" />
+    <path
+        android:fillColor="#2563EB"
+        android:pathData="M12,28 L45,36 L78,28 L76,67 L45,75 L14,67 Z" />
+
+    <!-- Layered curved page thickness -->
+    <path
+        android:fillColor="#BFDBFE"
+        android:pathData="M15,25 C27,22 36,26 45,33 C54,26 63,22 75,25 L73,63 C62,60 53,63 45,70 C37,63 28,60 17,63 Z" />
+
+    <!-- Left & right white open pages -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M17,21 C28,18 37,22 45,30 L45,67 C37,60 28,57 18,60 Z" />
+    <path
+        android:fillColor="#F1F5F9"
+        android:pathData="M73,21 C62,18 53,22 45,30 L45,67 C53,60 62,57 72,60 Z" />
+
+    <!-- Crisp reading lines -->
+    <path
+        android:fillColor="#93C5FD"
+        android:pathData="M22,30 L39,34 L39,37 L22,33 Z M22,39 L39,43 L39,46 L22,42 Z M22,48 L35,51 L35,54 L22,51 Z" />
+    <path
+        android:fillColor="#93C5FD"
+        android:pathData="M51,34 L67,30 L67,33 L51,37 Z M51,43 L64,40 L64,43 L51,46 Z" />
+
+    <!-- Center spine shadow -->
+    <path
+        android:fillColor="#60A5FA"
+        android:pathData="M44,30 L46,30 L46,67 L44,67 Z" />
+
+    <!-- Large 3D faceted golden star -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M71,44 L76.6,55.4 L89.2,57.2 L80.1,66.1 L82.2,78.6 L71,72.7 L59.8,78.6 L61.9,66.1 L52.8,57.2 L65.4,55.4 Z" />
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M71,46.5 L75.7,56.1 L86.3,57.6 L78.6,65.1 L80.4,75.6 L71,70.7 L61.6,75.6 L63.4,65.1 L55.7,57.6 L66.3,56.1 Z" />
+    <!-- Bright top-left star facet highlight -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M71,46.5 L71,61 L55.7,57.6 L66.3,56.1 Z" />
+
+</vector>

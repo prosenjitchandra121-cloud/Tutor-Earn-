@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Subtle glowing cyan-to-purple-to-gold rim -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="24dp" />
+            <gradient
+                android:angle="315"
+                android:startColor="#8038BDF8"
+                android:centerColor="#66A855F7"
+                android:endColor="#80FFD028"
+                android:type="linear" />
+        </shape>
+    </item>
+    <!-- Frosted deep navy interior surface -->
+    <item
+        android:bottom="1.4dp"
+        android:left="1.4dp"
+        android:right="1.4dp"
+        android:top="1.4dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="22.8dp" />
+            <gradient
+                android:angle="270"
+                android:startColor="#D90B1659"
+                android:endColor="#E6120B45"
+                android:type="linear" />
+        </shape>
+    </item>
+</layer-list>

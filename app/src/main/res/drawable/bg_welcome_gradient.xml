@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Deep dark navy blue to royal purple diagonal gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="225"
+                android:startColor="#0D1E6E"
+                android:centerColor="#070E3D"
+                android:endColor="#250B5E"
+                android:type="linear" />
+        </shape>
+    </item>
+    <!-- Electric blue upper lighting bloom -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:centerX="0.5"
+                android:centerY="0.28"
+                android:gradientRadius="290dp"
+                android:startColor="#4A00B4FF"
+                android:endColor="#00000000"
+                android:type="radial" />
+        </shape>
+    </item>
+    <!-- Subtle golden & violet lower accent bloom -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:centerX="0.5"
+                android:centerY="0.82"
+                android:gradientRadius="260dp"
+                android:startColor="#26FFD028"
+                android:centerColor="#337C3AED"
+                android:endColor="#00000000"
+                android:type="radial" />
+        </shape>
+    </item>
+</layer-list>

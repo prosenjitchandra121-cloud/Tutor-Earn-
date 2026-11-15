@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="140dp"
+    android:height="120dp"
+    android:viewportWidth="140"
+    android:viewportHeight="120">
+
+    <!-- Ambient cyan-gold glow -->
+    <path
+        android:fillColor="#4D00D4FF"
+        android:pathData="M70,104 A58,11 0 1,1 69.99,104 Z" />
+    <path
+        android:fillColor="#3838BDF8"
+        android:pathData="M62,24 A40,40 0 1,1 61.99,24 Z" />
+
+    <!-- Digital neural network nodes & circuit lines -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M20,38 L36,48 M18,74 L36,68 M104,34 L120,26"
+        android:strokeWidth="1.8"
+        android:strokeColor="#38BDF8"
+        android:strokeAlpha="0.75"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M18,34 A4,4 0 1,1 17.99,34 Z M15,71 A3.5,3.5 0 1,1 14.99,71 Z M122,22 A4,4 0 1,1 121.99,22 Z" />
+
+    <!-- Sparkles -->
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M24,18 L25.8,22.2 L30,24 L25.8,25.8 L24,30 L22.2,25.8 L18,24 L22.2,22.2 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M122,88 L123.5,91.5 L127,93 L123.5,94.5 L122,98 L120.5,94.5 L117,93 L120.5,91.5 Z" />
+
+    <!-- Friendly 3D AI Robot -->
+    <!-- Antenna -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M60,20 L64,20 L64,29 L60,29 Z" />
+    <path
+        android:fillColor="#0EA5E9"
+        android:pathData="M62,12 A5.5,5.5 0 1,1 61.99,12 Z" />
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M60.8,14.5 A2,2 0 1,1 60.79,14.5 Z" />
+
+    <!-- Ear pods -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M32,42 L38,42 L38,57 L32,57 C29.8,57 28,55.2 28,53 L28,46 C28,43.8 29.8,42 32,42 Z" />
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M86,42 L92,42 C94.2,42 96,43.8 96,46 L96,53 C96,55.2 94.2,57 92,57 L86,57 Z" />
+
+    <!-- Robot head -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M45,28 L79,28 C83.9,28 88,32.1 88,37 L88,58 C88,62.9 83.9,67 79,67 L45,67 C40.1,67 36,62.9 36,58 L36,37 C36,32.1 40.1,28 45,28 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,28 L79,28 C83.2,28 86.7,31.1 87.6,35.2 L87.6,53 C83,59 41,59 36.4,53 L36.4,35.2 C37.3,31.1 40.8,28 45,28 Z" />
+
+    <!-- Dark visor with glowing cyan eyes & smile -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M46,35 L78,35 C81.3,35 84,37.7 84,41 L84,55 C84,58.3 81.3,61 78,61 L46,61 C42.7,61 40,58.3 40,55 L40,41 C40,37.7 42.7,35 46,35 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M52,42 A4,4 0 1,1 51.99,42 Z M72,42 A4,4 0 1,1 71.99,42 Z" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M56,52 C59,55.5 65,55.5 68,52"
+        android:strokeWidth="2.8"
+        android:strokeColor="#38BDF8"
+        android:strokeLineCap="round" />
+
+    <!-- Robot torso & glowing chest core -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M46,70 L78,70 L82,94 L42,94 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M47,70 L74,70 L77,92 L44,92 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M61,76 A6,6 0 1,1 60.99,76 Z" />
+
+    <!-- Glowing Floating Digital Learning Hologram Book (Bottom Left) -->
+    <path
+        android:fillColor="#2563EB"
+        android:pathData="M14,82 L31,86 L48,82 L48,99 L31,103 L14,99 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,80 L31,84 L46,80 L46,96 L31,100 L16,96 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M19,86 L28,88 L28,90 L19,88 Z M34,88 L43,86 L43,88 L34,90 Z" />
+
+    <!-- Glowing AI Microchip Badge on Right -->
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M96,46 L99,46 L99,51 L96,51 Z M104,46 L107,46 L107,51 L104,51 Z M112,46 L115,46 L115,51 L112,51 Z M96,82 L99,82 L99,87 L96,87 Z M104,82 L107,82 L107,87 L104,87 Z M112,82 L115,82 L115,87 L112,87 Z M87,57 L92,57 L92,60 L87,60 Z M87,65 L92,65 L92,68 L87,68 Z M87,73 L92,73 L92,76 L87,76 Z M120,57 L125,57 L125,60 L120,60 Z M120,65 L125,65 L125,68 L120,68 Z M120,73 L125,73 L125,76 L120,76 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M94,50 L117,50 C119.8,50 122,52.2 122,55 L122,78 C122,80.8 119.8,83 117,83 L94,83 C91.2,83 89,80.8 89,78 L89,55 C89,52.2 91.2,50 94,50 Z" />
+    <path
+        android:fillColor="#1D4ED8"
+        android:pathData="M95,52 L116,52 C117.7,52 119,53.3 119,55 L119,77 C119,78.7 117.7,80 116,80 L95,80 C93.3,80 92,78.7 92,77 L92,55 C92,53.3 93.3,52 95,52 Z" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M96.5,72 L100.5,60 L104.5,72 M97.8,68.2 L103.2,68.2"
+        android:strokeWidth="2.6"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M111,60 L111,72"
+        android:strokeWidth="2.8"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round" />
+
+</vector>

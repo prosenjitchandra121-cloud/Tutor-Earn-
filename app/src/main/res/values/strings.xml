@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">Tutor Earn</string>
+    <string name="brand_tutor">Tutor</string>
+    <string name="brand_earn">Earn</string>
+    <string name="tagline_learn_complete_earn">Learn  •  Complete  •  Earn</string>
+    <string name="loading_label">Loading…</string>
+
+    <!-- Home Feature Card Titles (Exact Required Names) -->
+    <string name="feature_prime_survey">Prime Survey</string>
+    <string name="feature_survey_rewards">Survey Rewards</string>
+    <string name="feature_read_and_rewards">Read and Rewards</string>
+    <string name="feature_earn_with_ai">Earn With AI</string>
+
+    <!-- Home Centralized Coin Balance -->
+    <string name="home_my_coins_label">My Coins</string>
+    <string name="home_coins_amount_format">%1$s Coins</string>
+    <string name="cd_coin_balance_icon">Golden coin balance icon</string>
+
+    <!-- Welcome Landing Screen -->
+    <string name="welcome_headline">Welcome to Tutor Earn</string>
+    <string name="get_started">Get Started</string>
+
+    <!-- Home Promotional Banner Carousel (3 Slides) -->
+    <string name="promo_slide_1_title">Learn &amp; Earn Smarter!</string>
+    <string name="promo_slide_1_subtitle">Complete tasks and earn rewards</string>
+    <string name="promo_slide_2_title">Your Time, Your Rewards!</string>
+    <string name="promo_slide_2_subtitle">Discover exciting survey opportunities</string>
+    <string name="promo_slide_3_title">Explore the Power of AI!</string>
+    <string name="promo_slide_3_subtitle">Learn something new every day</string>
+
+    <!-- Login Screen -->
+    <string name="login_heading">Welcome Back!</string>
+    <string name="login_subtitle">Login to continue your journey.</string>
+    <string name="hint_email_address">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="link_no_account">Don\'t have an account? Sign Up</string>
+
+    <!-- Sign Up Screen -->
+    <string name="signup_heading">Create Account</string>
+    <string name="signup_subtitle">Join Tutor Earn and start your journey.</string>
+    <string name="hint_full_name">Full Name</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="btn_create_account">Create Account</string>
+    <string name="link_have_account">Already have an account? Login</string>
+
+    <!-- Validation Messages -->
+    <string name="error_name_required">Please enter your full name.</string>
+    <string name="error_name_too_short">Full name must be at least 2 characters.</string>
+    <string name="error_email_required">Please enter your email address.</string>
+    <string name="error_email_invalid">Please enter a valid email address.</string>
+    <string name="error_password_required">Please enter your password.</string>
+    <string name="error_password_too_short">Password must be at least 6 characters.</string>
+    <string name="error_confirm_password_required">Please confirm your password.</string>
+    <string name="error_passwords_mismatch">Passwords do not match.</string>
+
+    <!-- Accessibility Content Descriptions -->
+    <string name="cd_app_emblem">Tutor Earn emblem</string>
+    <string name="cd_welcome_illustration">Tutor Earn education and rewards illustration</string>
+    <string name="cd_get_started_button">Get Started and continue to Login</string>
+    <string name="cd_login_button">Login and continue to Home Screen</string>
+    <string name="cd_create_account_button">Create Account and continue to Home Screen</string>
+    <string name="cd_loading_indicator">Loading application</string>
+    <string name="cd_prime_survey_card">Prime Survey feature card</string>
+    <string name="cd_survey_rewards_card">Survey Rewards feature card</string>
+    <string name="cd_read_and_rewards_card">Read and Rewards feature card</string>
+    <string name="cd_earn_with_ai_card">Earn With AI feature card</string>
+    <string name="cd_promo_prev">Previous promotional slide</string>
+    <string name="cd_promo_next">Next promotional slide</string>
+
+    <!-- Prime Survey Feature -->
+    <string name="prime_survey_title">Prime Survey</string>
+    <string name="prime_survey_total_questions">Total Questions: 15</string>
+    <string name="prime_survey_question_progress">Question %1$d of %2$d</string>
+    <string name="prime_survey_btn_next">Next</string>
+    <string name="prime_survey_feedback_correct">Correct Answer!</string>
+    <string name="prime_survey_feedback_incorrect">Incorrect Answer</string>
+    <string name="prime_survey_completed_title">Prime Survey Completed!</string>
+    <string name="prime_survey_congratulations">Congratulations!</string>
+    <string name="prime_survey_reward_subtitle">Watch a short rewarded video to claim your 1050 virtual coins.</string>
+    <string name="prime_survey_score_summary">Score: %1$d / %2$d Correct</string>
+    <string name="prime_survey_claim_coins">CLAIM 1050 COINS</string>
+    <string name="prime_survey_coins_added">1050 Coins Added Successfully!</string>
+    <string name="prime_survey_cooldown_title">24-Hour Reward Limit Active</string>
+    <string name="prime_survey_cooldown_remaining">Next claim available in %1$s</string>
+    <string name="prime_survey_ad_loading">Loading rewarded video…</string>
+    <string name="prime_survey_loading_advertisement">Loading Advertisement...</string>
+    <string name="prime_survey_ad_unavailable_compact">Advertisement unavailable. Please try again.</string>
+    <string name="prime_survey_ad_retry">RETRY</string>
+    <string name="prime_survey_ad_not_completed">Rewarded video was closed early. Complete the video to claim 1050 coins.</string>
+    <string name="prime_survey_ad_unavailable">Rewarded video could not be loaded right now. Please check your connection and tap Retry.</string>
+    <string name="prime_survey_retry_rewarded">RETRY REWARDED VIDEO</string>
+    <string name="prime_survey_time_verification_failed">Please connect to the internet so we can verify your 24-hour reward eligibility securely.</string>
+    <string name="prime_survey_already_claimed">Reward already claimed within the last 24 hours.</string>
+    <string name="prime_survey_test_ad_notice">Test Ad Mode — using official Google test AdMob IDs in debug build</string>
+    <string name="prime_survey_back_to_home">Back to Home</string>
+    <string name="cd_survey_back">Navigate back to Home</string>
+    <string name="cd_survey_trophy">Prime Survey reward trophy</string>
+    <string name="btn_logging_in">Logging in…</string>
+    <string name="btn_creating_account">Creating Account…</string>
+    <string name="error_firebase_auth_failed">Authentication failed. Please check your credentials and try again.</string>
+
+    <!-- Survey Rewards Screen -->
+    <string name="survey_rewards_title">Survey Rewards</string>
+    <string name="survey_rewards_sentence">Watch a rewarded advertisement and claim your 500 coins!</string>
+    <string name="survey_rewards_claim_button">CLAIM 500 COINS</string>
+    <string name="survey_rewards_claim_500_coins">CLAIM 500 COINS</string>
+    <string name="survey_rewards_loading_ad">Loading Advertisement...</string>
+    <string name="survey_rewards_success">500 Coins Added Successfully!</string>
+    <string name="survey_rewards_cooldown_remaining">Available again in %1$s</string>
+    <string name="survey_rewards_ad_not_completed">Rewarded video was closed early. Complete the video to claim 500 coins.</string>
+    <string name="survey_rewards_ad_unavailable">Advertisement unavailable. Please try again.</string>
+    <string name="cd_survey_rewards_back">Navigate back to Home</string>
+    <string name="cd_survey_rewards_coin">Survey Rewards golden coin icon</string>
+</resources>

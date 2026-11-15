@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+    <!-- Subtle background analytics bar motifs -->
+    <path
+        android:fillColor="#26FFFFFF"
+        android:pathData="M8,46 L14,46 L14,68 L8,68 Z M16,38 L22,38 L22,68 L16,68 Z M74,34 L80,34 L80,68 L74,68 Z M82,24 L88,24 L88,68 L82,68 Z" />
+
+    <!-- Clipboard soft shadow -->
+    <path
+        android:fillColor="#33041E66"
+        android:pathData="M24,20 L66,20 C69.9,20 73,23.1 73,27 L73,75 C73,78.9 69.9,82 66,82 L24,82 C20.1,82 17,78.9 17,75 L17,27 C17,23.1 20.1,20 24,20 Z" />
+
+    <!-- Clipboard 3D cobalt frame -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M22,17 L64,17 C67.9,17 71,20.1 71,24 L71,72 C71,75.9 67.9,79 64,79 L22,79 C18.1,79 15,75.9 15,72 L15,24 C15,20.1 18.1,17 22,17 Z" />
+    <path
+        android:fillColor="#2563EB"
+        android:pathData="M22,17 L64,17 C67.3,17 70,19.7 70,23 L70,71 C70,74.3 67.3,77 64,77 L22,77 C18.7,77 16,74.3 16,71 L16,23 C16,19.7 18.7,17 22,17 Z" />
+
+    <!-- White paper sheet with subtle left highlight -->
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M22,22 L64,22 C65.1,22 66,22.9 66,24 L66,71 C66,72.1 65.1,73 64,73 L22,73 C20.9,73 20,72.1 20,71 L20,24 C20,22.9 20.9,22 22,22 Z" />
+
+    <!-- Top metallic clip -->
+    <path
+        android:fillColor="#1D4ED8"
+        android:pathData="M31,12 L55,12 C57.2,12 59,13.8 59,16 L59,23 C59,24.7 57.7,26 56,26 L30,26 C28.3,26 27,24.7 27,23 L27,16 C27,13.8 28.8,12 31,12 Z" />
+    <path
+        android:fillColor="#60A5FA"
+        android:pathData="M39,9 L47,9 C49.2,9 51,10.8 51,13 L51,16 L35,16 L35,13 C35,10.8 36.8,9 39,9 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M43,11.5 A1.8,1.8 0 1,1 42.99,11.5 Z" />
+
+    <!-- Survey checkmarks & lines -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M26,35 L29.5,38.5 L35,32"
+        android:strokeWidth="3.2"
+        android:strokeColor="#1D4ED8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M26,47 L29.5,50.5 L35,44"
+        android:strokeWidth="3.2"
+        android:strokeColor="#1D4ED8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M26,59 L29.5,62.5 L35,56"
+        android:strokeWidth="3.2"
+        android:strokeColor="#1D4ED8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <path
+        android:fillColor="#60A5FA"
+        android:pathData="M40,34 L59,34 C60.1,34 61,34.9 61,36 C61,37.1 60.1,38 59,38 L40,38 C38.9,38 38,37.1 38,36 C38,34.9 38.9,34 40,34 Z" />
+    <path
+        android:fillColor="#93C5FD"
+        android:pathData="M40,46 L55,46 C56.1,46 57,46.9 57,48 C57,49.1 56.1,50 55,50 L40,50 C38.9,50 38,49.1 38,48 C38,46.9 38.9,46 40,46 Z" />
+    <path
+        android:fillColor="#BFDBFE"
+        android:pathData="M40,58 L50,58 C51.1,58 52,58.9 52,60 C52,61.1 51.1,62 50,62 L40,62 C38.9,62 38,61.1 38,60 C38,58.9 38.9,58 40,58 Z" />
+
+    <!-- Golden-rimmed cyan magnifying glass -->
+    <!-- Handle -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M68,66 L82,80 C83.4,81.4 83.4,83.6 82,85 L81,86 C79.6,87.4 77.4,87.4 76,86 L62,72 Z" />
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M67,65 L80,78 C81,79 81,80.6 80,81.6 L79,82.6 C78,83.6 76.4,83.6 75.4,82.6 L62.4,69.6 Z" />
+    <!-- Gold rim outer & inner -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M58,41 A17.5,17.5 0 1,1 57.99,41 Z" />
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M58,42.5 A16,16 0 1,1 57.99,42.5 Z" />
+    <!-- Glossy cyan glass lens -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M58,46 A12.5,12.5 0 1,1 57.99,46 Z" />
+    <path
+        android:fillColor="#7DD3FC"
+        android:pathData="M58,47 A11,11 0 1,1 57.99,47 Z" />
+    <!-- Specular curved glass highlight -->
+    <path
+        android:fillColor="#BFFFFFFF"
+        android:pathData="M50,55 C50,50 54,48 59,48 C55,50 53,53 52,58 C51,57 50,56 50,55 Z" />
+
+</vector>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base vibrant cyan-to-cobalt gradient with crisp glass stroke -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/card_corner_radius" />
+            <gradient
+                android:angle="315"
+                android:startColor="@color/prime_survey_start"
+                android:centerColor="@color/prime_survey_center"
+                android:endColor="@color/prime_survey_end"
+                android:type="linear" />
+            <stroke
+                android:width="1.6dp"
+                android:color="@color/glass_border_light" />
+        </shape>
+    </item>
+    <!-- Soft radial light highlight behind icon -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/card_corner_radius" />
+            <gradient
+                android:centerX="0.5"
+                android:centerY="0.32"
+                android:gradientRadius="130dp"
+                android:startColor="#44FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:type="radial" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_horizontal_padding">16dp</dimen>
+    <dimen name="header_emblem_size">82dp</dimen>
+    <dimen name="header_title_size">29sp</dimen>
+    <dimen name="header_subtitle_size">13sp</dimen>
+    <dimen name="splash_emblem_size">184dp</dimen>
+    <dimen name="splash_title_size">42sp</dimen>
+    <dimen name="splash_subtitle_size">15.5sp</dimen>
+    <dimen name="card_corner_radius">24dp</dimen>
+    <dimen name="card_grid_gap">14dp</dimen>
+    <dimen name="card_min_height">218dp</dimen>
+    <dimen name="card_icon_size">96dp</dimen>
+    <dimen name="card_title_size">18.5sp</dimen>
+    <dimen name="card_arrow_size">38dp</dimen>
+
+    <!-- Welcome Landing Screen -->
+    <dimen name="welcome_illustration_size">216dp</dimen>
+    <dimen name="welcome_title_size">42sp</dimen>
+    <dimen name="welcome_badge_size">14sp</dimen>
+    <dimen name="welcome_button_height">58dp</dimen>
+
+    <!-- Promotional Banner Carousel -->
+    <dimen name="promo_banner_height">164dp</dimen>
+    <dimen name="promo_banner_image_size">124dp</dimen>
+    <dimen name="promo_title_size">19sp</dimen>
+    <dimen name="promo_subtitle_size">13sp</dimen>
+</resources>

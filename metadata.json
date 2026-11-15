@@ -1,0 +1,6 @@
+{
+  "name": "Tutor Earn",
+  "description": "A modern, premium Android app featuring a gradient animated Splash Screen and a responsive Home Screen with Prime Survey, Survey Rewards, Read and Rewards, and Earn With AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

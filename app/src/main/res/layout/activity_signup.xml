@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signup_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_welcome_gradient"
+    tools:context=".SignUpActivity">
+
+    <!-- Top decorative wave accent -->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="96dp"
+        android:alpha="0.72"
+        android:importantForAccessibility="no"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_wave_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Bottom decorative wave accent -->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:alpha="0.88"
+        android:importantForAccessibility="no"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_wave_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- ScrollView supporting small screens and soft keyboard adjustment -->
+    <ScrollView
+        android:id="@+id/signup_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:isScrollContainer="true"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/signup_content_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="22dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/signup_responsive_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.42"
+                app:layout_constraintWidth_max="480dp">
+
+                <!-- Tutor Earn Top Branding -->
+                <LinearLayout
+                    android:id="@+id/signup_brand_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:id="@+id/signup_logo_glow"
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_welcome_hero_glow" />
+
+                        <ImageView
+                            android:id="@+id/signup_logo"
+                            android:layout_width="68dp"
+                            android:layout_height="68dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/cd_app_emblem"
+                            android:src="@drawable/ic_tutor_earn_emblem" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/brand_tutor"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/brand_earn"
+                            android:textColor="@color/gold_primary"
+                            android:textSize="22sp"
+                            android:textStyle="bold|italic" />
+
+                        <ImageView
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:layout_gravity="top"
+                            android:layout_marginStart="2dp"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_brand_burst" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Glassmorphic Sign Up Form Card -->
+                <LinearLayout
+                    android:id="@+id/signup_form_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_auth_card"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="22dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/signup_brand_header">
+
+                    <TextView
+                        android:id="@+id/signup_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="@string/signup_heading"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/signup_subtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="@string/signup_subtitle"
+                        android:textColor="@color/text_subtitle"
+                        android:textSize="13sp" />
+
+                    <!-- Full Name Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_signup_name"
+                        style="@style/Widget.TutorEarn.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="@string/hint_full_name"
+                        app:startIconDrawable="@drawable/ic_input_person">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_signup_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName|textCapWords"
+                            android:maxLines="1"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Email Address Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_signup_email"
+                        style="@style/Widget.TutorEarn.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:hint="@string/hint_email_address"
+                        app:startIconDrawable="@drawable/ic_input_email">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_signup_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Password Input with Show/Hide Toggle -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_signup_password"
+                        style="@style/Widget.TutorEarn.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:hint="@string/hint_password"
+                        app:endIconMode="password_toggle"
+                        app:startIconDrawable="@drawable/ic_input_lock">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_signup_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Confirm Password Input with Show/Hide Toggle -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_signup_confirm_password"
+                        style="@style/Widget.TutorEarn.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:hint="@string/hint_confirm_password"
+                        app:endIconMode="password_toggle"
+                        app:startIconDrawable="@drawable/ic_input_lock">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_signup_confirm_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Animated Golden Create Account CTA Button -->
+                    <FrameLayout
+                        android:id="@+id/signup_cta_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false">
+
+                        <View
+                            android:id="@+id/btn_create_account_glow"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="6dp"
+                            android:background="@drawable/bg_btn_glow_aura"
+                            android:scaleX="1.03"
+                            android:scaleY="1.22" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_create_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:clickable="true"
+                            android:contentDescription="@string/cd_create_account_button"
+                            android:focusable="true"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardCornerRadius="28dp"
+                            app:cardElevation="8dp"
+                            app:rippleColor="#4DFFFFFF"
+                            app:strokeWidth="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/bg_btn_get_started"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingHorizontal="24dp">
+
+                                <TextView
+                                    android:id="@+id/btn_create_account_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat"
+                                    android:text="@string/btn_create_account"
+                                    android:textColor="@color/navy_deep"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="8dp"
+                                    android:importantForAccessibility="no"
+                                    android:src="@drawable/ic_chevron_right"
+                                    app:tint="@color/navy_deep" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!-- Switch to Login Link -->
+                <TextView
+                    android:id="@+id/tv_go_to_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center"
+                    android:minHeight="48dp"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="10dp"
+                    android:text="@string/link_have_account"
+                    android:textColor="@color/text_subtitle"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/signup_form_card" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

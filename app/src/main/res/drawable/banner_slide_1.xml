@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="140dp"
+    android:height="120dp"
+    android:viewportWidth="140"
+    android:viewportHeight="120">
+
+    <!-- Ambient neon glow oval beneath books & trophy -->
+    <path
+        android:fillColor="#4D38BDF8"
+        android:pathData="M70,104 A58,11 0 1,1 69.99,104 Z" />
+    <path
+        android:fillColor="#4DFACC15"
+        android:pathData="M96,102 A32,7 0 1,1 95.99,102 Z" />
+
+    <!-- Golden growth arrow sweeping upward behind trophy -->
+    <path
+        android:fillColor="#FACC15"
+        android:fillAlpha="0.90"
+        android:pathData="M96,74 L120,40 L114,36 L132,26 L130,46 L125,43 L103,78 Z" />
+
+    <!-- Sparkles -->
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M18,28 L20,33 L25,35 L20,37 L18,42 L16,37 L11,35 L16,33 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M116,18 L117.5,22 L121.5,23.5 L117.5,25 L116,29 L114.5,25 L110.5,23.5 L114.5,22 Z" />
+
+    <!-- Bottom 3D Red/Orange Book -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M14,82 L56,94 L92,82 L92,94 L56,106 L14,94 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M17,85 L56,96 L89,85 L89,91 L56,102 L17,91 Z" />
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M14,82 L50,70 L92,82 L56,94 Z" />
+
+    <!-- Upper 3D Royal Blue Book -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M18,68 L56,80 L88,68 L88,80 L56,92 L18,80 Z" />
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M21,71 L56,82 L85,71 L85,77 L56,88 L21,77 Z" />
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M18,68 L52,56 L88,68 L56,80 Z" />
+
+    <!-- 3D Graduation Cap perched on top of books -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M34,42 L34,54 C34,59 43,63 53,63 C63,63 72,59 72,54 L72,42 Z" />
+    <path
+        android:fillColor="#0B1120"
+        android:pathData="M53,16 L88,33 L53,50 L18,33 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M53,18 L84,33 L53,48 L22,33 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:fillAlpha="0.28"
+        android:pathData="M53,19 L80,32 L53,36 L26,32 Z" />
+
+    <!-- Cap golden button & tassel -->
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M53,30 A3,3 0 1,1 52.99,30 Z" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M53,33 L78,39 L78,56"
+        android:strokeWidth="2.4"
+        android:strokeColor="#FACC15"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M75,55 L81,55 L83,65 L73,65 Z" />
+
+    <!-- Shiny 3D Golden Trophy on the right -->
+    <!-- Trophy base -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M86,95 L114,95 L118,103 L82,103 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M89,90 L111,90 L114,95 L86,95 Z" />
+    <!-- Trophy stem -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M96,76 L104,76 L105,90 L95,90 Z" />
+    <!-- Trophy handles -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M85,54 C77,54 77,68 87,70"
+        android:strokeWidth="3.2"
+        android:strokeColor="#FACC15"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M115,54 C123,54 123,68 113,70"
+        android:strokeWidth="3.2"
+        android:strokeColor="#F59E0B"
+        android:strokeLineCap="round" />
+    <!-- Trophy cup bowl -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M84,48 L116,48 L113,68 C112,75 106,79 100,79 C94,79 88,75 87,68 Z" />
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M85,48 L102,48 L100,78 C94,78 88,74 87,68 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M83,46 L117,46 C118.1,46 119,46.9 119,48 C119,49.1 118.1,50 117,50 L83,50 C81.9,50 81,49.1 81,48 C81,46.9 81.9,46 83,46 Z" />
+    <!-- Star embossed on trophy -->
+    <path
+        android:fillColor="#FFFBEB"
+        android:pathData="M100,55 L102.2,59.6 L107.2,60.3 L103.6,63.8 L104.5,68.8 L100,66.4 L95.5,68.8 L96.4,63.8 L92.8,60.3 L97.8,59.6 Z" />
+
+</vector>

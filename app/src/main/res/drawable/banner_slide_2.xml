@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="140dp"
+    android:height="120dp"
+    android:viewportWidth="140"
+    android:viewportHeight="120">
+
+    <!-- Ambient glow beneath clipboard & gift -->
+    <path
+        android:fillColor="#4DA855F7"
+        android:pathData="M70,104 A58,11 0 1,1 69.99,104 Z" />
+    <path
+        android:fillColor="#4D38BDF8"
+        android:pathData="M44,102 A30,7 0 1,1 43.99,102 Z" />
+
+    <!-- Sparkles -->
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M118,22 L120,27 L125,29 L120,31 L118,36 L116,31 L111,29 L116,27 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M18,34 L19.8,38.2 L24,40 L19.8,41.8 L18,46 L16.2,41.8 L12,40 L16.2,38.2 Z" />
+
+    <!-- Left 3D Survey Clipboard -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M20,22 L60,22 C63.3,22 66,24.7 66,28 L66,86 C66,89.3 63.3,92 60,92 L20,92 C16.7,92 14,89.3 14,86 L14,28 C14,24.7 16.7,22 20,22 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,28 L58,28 C59.1,28 60,28.9 60,30 L60,84 C60,85.1 59.1,86 58,86 L22,86 C20.9,86 20,85.1 20,84 L20,30 C20,28.9 20.9,28 22,28 Z" />
+    <path
+        android:fillColor="#60A5FA"
+        android:pathData="M30,17 L50,17 C51.7,17 53,18.3 53,20 L53,26 C53,27.1 52.1,28 51,28 L29,28 C27.9,28 27,27.1 27,26 L27,20 C27,18.3 28.3,17 30,17 Z" />
+    <!-- Checkmarks & bars -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M25,42 L28,45 L33,39 M25,55 L28,58 L33,52 M25,68 L28,71 L33,65"
+        android:strokeWidth="2.8"
+        android:strokeColor="#2563EB"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="#93C5FD"
+        android:pathData="M38,41 L54,41 L54,45 L38,45 Z M38,54 L51,54 L51,58 L38,58 Z M38,67 L48,67 L48,71 L38,71 Z" />
+
+    <!-- Right 3D Red Gift Box with Golden Ribbon -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M62,54 L88,56 L88,96 L64,94 C62.9,93.9 62,93 62,91.8 Z" />
+    <path
+        android:fillColor="#B91C1C"
+        android:pathData="M88,56 L114,54 L114,91.8 C114,93 113.1,93.9 112,94 L88,96 Z" />
+    <path
+        android:fillColor="#F87171"
+        android:pathData="M58,42 L88,44 L88,56 L60,55 C58.9,55 58,54.1 58,53 Z" />
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M88,44 L118,42 L118,53 C118,54.1 117.1,55 116,55 L88,56 Z" />
+
+    <!-- Golden Ribbon & Bow -->
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M82,43 L88,44 L88,96 L82,95 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M88,44 L94,43 L94,95 L88,96 Z" />
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M88,43 C76,27 64,33 70,43 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M88,43 C100,27 112,33 106,43 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M88,39 A4.5,4.5 0 1,1 87.99,39 Z" />
+
+    <!-- Front Stacked Golden Coins -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M100,92 C100,96 124,96 124,92 L124,97 C124,101 100,101 100,97 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M100,85 C100,89 124,89 124,85 L124,92 C124,96 100,96 100,92 Z" />
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M100,78 C100,82 124,82 124,78 L124,85 C124,89 100,89 100,85 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M112,73.5 A12,4.5 0 1,1 111.99,73.5 Z" />
+
+    <!-- Front smaller coin stack -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M84,96 C84,99.5 104,99.5 104,96 L104,100 C104,103.5 84,103.5 84,100 Z" />
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M84,90 C84,93.5 104,93.5 104,90 L104,96 C104,99.5 84,99.5 84,96 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M94,86 A10,3.8 0 1,1 93.99,86 Z" />
+
+</vector>

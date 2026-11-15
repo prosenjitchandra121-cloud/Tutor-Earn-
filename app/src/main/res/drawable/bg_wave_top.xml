@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="110dp"
+    android:viewportWidth="360"
+    android:viewportHeight="110">
+    <!-- Subtle violet-blue wave curve -->
+    <path
+        android:fillColor="#336D28D9"
+        android:pathData="M0,0 L360,0 L360,48 C275,88 185,20 95,62 C48,84 18,74 0,60 Z" />
+    <!-- Bright electric blue accent ribbon -->
+    <path
+        android:fillColor="#4D2563EB"
+        android:pathData="M0,38 C90,78 190,10 360,52 L360,64 C195,24 90,92 0,52 Z" />
+    <!-- Golden wave swoosh matching reference header -->
+    <path
+        android:fillColor="#FFC828"
+        android:fillAlpha="0.88"
+        android:pathData="M180,68 C245,42 308,34 360,46 L360,62 C304,52 246,66 180,74 Z" />
+</vector>

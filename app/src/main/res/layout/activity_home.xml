@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_gradient"
+    tools:context=".HomeActivity">
+
+    <!-- Bottom decorative glowing wave -->
+    <ImageView
+        android:id="@+id/home_wave_bottom"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:importantForAccessibility="no"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_wave_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Responsive Scrollable Container -->
+    <ScrollView
+        android:id="@+id/home_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_content_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/screen_horizontal_padding"
+            android:paddingTop="12dp"
+            android:paddingBottom="18dp">
+
+            <!-- Centered max-width container for phones, foldables, and tablets -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_responsive_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.30"
+                app:layout_constraintWidth_max="600dp">
+
+                <!-- Premium Brand Header -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/home_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!-- Ambient glow behind emblem -->
+                    <View
+                        android:id="@+id/home_header_glow"
+                        android:layout_width="112dp"
+                        android:layout_height="112dp"
+                        android:background="@drawable/bg_splash_glow"
+                        app:layout_constraintBottom_toBottomOf="@+id/home_header_emblem"
+                        app:layout_constraintEnd_toEndOf="@+id/home_header_emblem"
+                        app:layout_constraintStart_toStartOf="@+id/home_header_emblem"
+                        app:layout_constraintTop_toTopOf="@+id/home_header_emblem" />
+
+                    <ImageView
+                        android:id="@+id/home_header_emblem"
+                        android:layout_width="@dimen/header_emblem_size"
+                        android:layout_height="@dimen/header_emblem_size"
+                        android:contentDescription="@string/cd_app_emblem"
+                        android:src="@drawable/ic_tutor_earn_emblem"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/home_header_text_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/home_header_emblem"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/home_header_emblem"
+                        app:layout_constraintTop_toTopOf="@+id/home_header_emblem">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/home_title_tutor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat"
+                                android:shadowColor="#80000000"
+                                android:shadowDx="0"
+                                android:shadowDy="3"
+                                android:shadowRadius="8"
+                                android:text="@string/brand_tutor"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/header_title_size"
+                                android:textStyle="bold|italic" />
+
+                            <TextView
+                                android:id="@+id/home_title_earn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:fontFamily="@font/montserrat"
+                                android:shadowColor="#80000000"
+                                android:shadowDx="0"
+                                android:shadowDy="3"
+                                android:shadowRadius="8"
+                                android:text="@string/brand_earn"
+                                android:textColor="@color/gold_primary"
+                                android:textSize="@dimen/header_title_size"
+                                android:textStyle="bold|italic" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="top"
+                                android:layout_marginStart="2dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/ic_brand_burst" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/home_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppins"
+                            android:letterSpacing="0.04"
+                            android:text="@string/tagline_learn_complete_earn"
+                            android:textColor="@color/text_subtitle"
+                            android:textSize="@dimen/header_subtitle_size"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+
+                    <!-- Golden & blue curved ribbon divider beneath header -->
+                    <ImageView
+                        android:id="@+id/home_header_divider"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_marginTop="2dp"
+                        android:importantForAccessibility="no"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bg_header_divider_wave"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/home_header_emblem" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Top Centralized Coin Balance Card -->
+                <FrameLayout
+                    android:id="@+id/coin_balance_wrapper"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/home_header">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_coin_balance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp"
+                        app:strokeWidth="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_coin_balance_card"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="11dp">
+
+                            <FrameLayout
+                                android:layout_width="50dp"
+                                android:layout_height="50dp">
+
+                                <View
+                                    android:id="@+id/iv_coin_balance_glow"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/bg_coin_glow_aura" />
+
+                                <ImageView
+                                    android:id="@+id/iv_coin_balance_icon"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/cd_coin_balance_icon"
+                                    android:src="@drawable/ic_coin_gold" />
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_coin_balance_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:letterSpacing="0.04"
+                                    android:text="@string/home_my_coins_label"
+                                    android:textColor="@color/gold_bright"
+                                    android:textSize="12.5sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_coin_balance_value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat"
+                                    android:shadowColor="#66000000"
+                                    android:shadowDx="0"
+                                    android:shadowDy="2"
+                                    android:shadowRadius="4"
+                                    android:text="0 Coins"
+                                    android:textColor="@color/white"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold"
+                                    tools:text="1,050 Coins" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </FrameLayout>
+
+                <!-- Row 1: Prime Survey & Survey Rewards -->
+                <LinearLayout
+                    android:id="@+id/home_cards_row_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:baselineAligned="false"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/coin_balance_wrapper">
+
+                    <!-- Card 1: Prime Survey -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_prime_survey"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="7dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:contentDescription="@string/cd_prime_survey_card"
+                        android:focusable="true"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="@dimen/card_corner_radius"
+                        app:cardElevation="10dp"
+                        app:rippleColor="#59FFFFFF"
+                        app:strokeWidth="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_card_prime_survey"
+                            android:minHeight="@dimen/card_min_height">
+
+                            <!-- Curved translucent glass wave in bottom half -->
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="108dp"
+                                android:importantForAccessibility="no"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/bg_card_inner_wave"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/icon_prime_survey"
+                                android:layout_width="@dimen/card_icon_size"
+                                android:layout_height="@dimen/card_icon_size"
+                                android:layout_marginTop="14dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/ic_feature_prime_survey"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/title_prime_survey"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/montserrat"
+                                android:gravity="center"
+                                android:lineSpacingExtra="2dp"
+                                android:minLines="2"
+                                android:shadowColor="#55000000"
+                                android:shadowDx="0"
+                                android:shadowDy="2"
+                                android:shadowRadius="4"
+                                android:text="@string/feature_prime_survey"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/card_title_size"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/icon_prime_survey" />
+
+                            <FrameLayout
+                                android:layout_width="@dimen/card_arrow_size"
+                                android:layout_height="@dimen/card_arrow_size"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/bg_arrow_glass_pill"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/title_prime_survey">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="center"
+                                    android:importantForAccessibility="no"
+                                    android:src="@drawable/ic_chevron_right" />
+                            </FrameLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Card 2: Survey Rewards -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_survey_rewards"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:contentDescription="@string/cd_survey_rewards_card"
+                        android:focusable="true"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="@dimen/card_corner_radius"
+                        app:cardElevation="10dp"
+                        app:rippleColor="#59FFFFFF"
+                        app:strokeWidth="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_card_survey_rewards"
+                            android:minHeight="@dimen/card_min_height">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="108dp"
+                                android:importantForAccessibility="no"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/bg_card_inner_wave"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/icon_survey_rewards"
+                                android:layout_width="@dimen/card_icon_size"
+                                android:layout_height="@dimen/card_icon_size"
+                                android:layout_marginTop="14dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/ic_feature_survey_rewards"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/title_survey_rewards"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/montserrat"
+                                android:gravity="center"
+                                android:lineSpacingExtra="2dp"
+                                android:minLines="2"
+                                android:shadowColor="#55000000"
+                                android:shadowDx="0"
+                                android:shadowDy="2"
+                                android:shadowRadius="4"
+                                android:text="@string/feature_survey_rewards"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/card_title_size"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/icon_survey_rewards" />
+
+                            <FrameLayout
+                                android:layout_width="@dimen/card_arrow_size"
+                                android:layout_height="@dimen/card_arrow_size"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/bg_arrow_glass_pill"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/title_survey_rewards">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="center"
+                                    android:importantForAccessibility="no"
+                                    android:src="@drawable/ic_chevron_right" />
+                            </FrameLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <!-- Row 2: Read and Rewards & Earn With AI -->
+                <LinearLayout
+                    android:id="@+id/home_cards_row_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/card_grid_gap"
+                    android:baselineAligned="false"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/home_cards_row_1">
+
+                    <!-- Card 3: Read and Rewards -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_read_and_rewards"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="7dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:contentDescription="@string/cd_read_and_rewards_card"
+                        android:focusable="true"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="@dimen/card_corner_radius"
+                        app:cardElevation="10dp"
+                        app:rippleColor="#59FFFFFF"
+                        app:strokeWidth="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_card_read_rewards"
+                            android:minHeight="@dimen/card_min_height">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="108dp"
+                                android:importantForAccessibility="no"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/bg_card_inner_wave"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/icon_read_and_rewards"
+                                android:layout_width="@dimen/card_icon_size"
+                                android:layout_height="@dimen/card_icon_size"
+                                android:layout_marginTop="14dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/ic_feature_read_rewards"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/title_read_and_rewards"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/montserrat"
+                                android:gravity="center"
+                                android:lineSpacingExtra="2dp"
+                                android:minLines="2"
+                                android:shadowColor="#55000000"
+                                android:shadowDx="0"
+                                android:shadowDy="2"
+                                android:shadowRadius="4"
+                                android:text="@string/feature_read_and_rewards"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/card_title_size"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/icon_read_and_rewards" />
+
+                            <FrameLayout
+                                android:layout_width="@dimen/card_arrow_size"
+                                android:layout_height="@dimen/card_arrow_size"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/bg_arrow_glass_pill"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/title_read_and_rewards">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="center"
+                                    android:importantForAccessibility="no"
+                                    android:src="@drawable/ic_chevron_right" />
+                            </FrameLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Card 4: Earn With AI -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_earn_with_ai"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:contentDescription="@string/cd_earn_with_ai_card"
+                        android:focusable="true"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="@dimen/card_corner_radius"
+                        app:cardElevation="10dp"
+                        app:rippleColor="#59FFFFFF"
+                        app:strokeWidth="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_card_earn_ai"
+                            android:minHeight="@dimen/card_min_height">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="108dp"
+                                android:importantForAccessibility="no"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/bg_card_inner_wave"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/icon_earn_with_ai"
+                                android:layout_width="@dimen/card_icon_size"
+                                android:layout_height="@dimen/card_icon_size"
+                                android:layout_marginTop="14dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/ic_feature_earn_ai"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/title_earn_with_ai"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/montserrat"
+                                android:gravity="center"
+                                android:lineSpacingExtra="2dp"
+                                android:minLines="2"
+                                android:shadowColor="#55000000"
+                                android:shadowDx="0"
+                                android:shadowDy="2"
+                                android:shadowRadius="4"
+                                android:text="@string/feature_earn_with_ai"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/card_title_size"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/icon_earn_with_ai" />
+
+                            <FrameLayout
+                                android:layout_width="@dimen/card_arrow_size"
+                                android:layout_height="@dimen/card_arrow_size"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/bg_arrow_glass_pill"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/title_earn_with_ai">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="center"
+                                    android:importantForAccessibility="no"
+                                    android:src="@drawable/ic_chevron_right" />
+                            </FrameLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <!-- 3-Slide Promotional Banner Carousel -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/promo_carousel_card"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/promo_banner_height"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="22dp"
+                    app:cardElevation="12dp"
+                    app:strokeWidth="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/home_cards_row_2">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_promo_banner_frame">
+
+                        <!-- Curved golden & violet bottom ribbon inside banner -->
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_margin="1.8dp"
+                            android:importantForAccessibility="no"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bg_promo_banner_wave"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <!-- Horizontal Swiping & Auto-Sliding Carousel -->
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/promo_view_pager"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!-- Subtle Left Arrow Indicator (48dp touch target) -->
+                        <FrameLayout
+                            android:id="@+id/promo_btn_prev"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:clickable="true"
+                            android:contentDescription="@string/cd_promo_prev"
+                            android:focusable="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <FrameLayout
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_gravity="center_vertical|start"
+                                android:layout_marginStart="8dp"
+                                android:background="@drawable/bg_promo_nav_pill">
+
+                                <ImageView
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_gravity="center"
+                                    android:importantForAccessibility="no"
+                                    android:src="@drawable/ic_chevron_left" />
+                            </FrameLayout>
+                        </FrameLayout>
+
+                        <!-- Subtle Right Arrow Indicator (48dp touch target) -->
+                        <FrameLayout
+                            android:id="@+id/promo_btn_next"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:clickable="true"
+                            android:contentDescription="@string/cd_promo_next"
+                            android:focusable="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <FrameLayout
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_gravity="center_vertical|end"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_promo_nav_pill">
+
+                                <ImageView
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_gravity="center"
+                                    android:importantForAccessibility="no"
+                                    android:src="@drawable/ic_chevron_right" />
+                            </FrameLayout>
+                        </FrameLayout>
+
+                        <!-- Exactly 3 Pagination Dots -->
+                        <LinearLayout
+                            android:id="@+id/promo_dots_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:importantForAccessibility="noHideDescendants"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <View
+                                android:id="@+id/promo_dot_0"
+                                android:layout_width="20dp"
+                                android:layout_height="7dp"
+                                android:background="@drawable/bg_promo_dot_active" />
+
+                            <View
+                                android:id="@+id/promo_dot_1"
+                                android:layout_width="7dp"
+                                android:layout_height="7dp"
+                                android:layout_marginStart="7dp"
+                                android:background="@drawable/bg_promo_dot_inactive" />
+
+                            <View
+                                android:id="@+id/promo_dot_2"
+                                android:layout_width="7dp"
+                                android:layout_height="7dp"
+                                android:layout_marginStart="7dp"
+                                android:background="@drawable/bg_promo_dot_inactive" />
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

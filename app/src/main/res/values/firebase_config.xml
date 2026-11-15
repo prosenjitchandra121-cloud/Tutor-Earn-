@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Firebase project values extracted from attached google-services__1__90d00956.json -->
+    <string name="tutor_firebase_project_id" translatable="false">proti-pro-tutor</string>
+    <string name="tutor_firebase_project_number" translatable="false">1067440189580</string>
+    <string name="tutor_firebase_database_url" translatable="false">https://proti-pro-tutor-default-rtdb.firebaseio.com</string>
+    <string name="tutor_firebase_storage_bucket" translatable="false">proti-pro-tutor.firebasestorage.app</string>
+    <string name="tutor_firebase_app_id" translatable="false">1:1067440189580:android:9b766a475ec6a63ebd4ba9</string>
+    <string name="tutor_firebase_api_key" translatable="false">AIzaSyDXf9cW35UpSaz-d_EYJD9Clu6HORtKe4k</string>
+    <string name="tutor_firebase_web_client_id" translatable="false">1067440189580-vf9p9hlq8pb5sh4d8psca28feafbjl2l.apps.googleusercontent.com</string>
+</resources>

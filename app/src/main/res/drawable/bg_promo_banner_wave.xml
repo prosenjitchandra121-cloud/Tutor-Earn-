@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="48dp"
+    android:viewportWidth="320"
+    android:viewportHeight="48">
+    <!-- Subtle violet-blue glow ribbon -->
+    <path
+        android:fillColor="#407C3AED"
+        android:pathData="M0,26 C80,46 210,4 320,28 L320,48 L0,48 Z" />
+    <!-- Bright golden accent swoosh -->
+    <path
+        android:fillColor="#FFD028"
+        android:fillAlpha="0.90"
+        android:pathData="M0,28 C55,40 118,45 190,46 L0,46 Z" />
+    <!-- Electric cyan hairline highlight -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M0,42 C105,46 215,36 320,18"
+        android:strokeWidth="1.6"
+        android:strokeColor="#8038BDF8" />
+</vector>

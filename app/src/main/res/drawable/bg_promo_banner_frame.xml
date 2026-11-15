@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer glowing golden-to-electric-blue gradient border -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="22dp" />
+            <gradient
+                android:angle="315"
+                android:startColor="#FFFFD028"
+                android:centerColor="#FF38BDF8"
+                android:endColor="#FFA855F7"
+                android:type="linear" />
+        </shape>
+    </item>
+    <!-- Inner deep navy blue and royal purple gradient surface -->
+    <item
+        android:bottom="1.8dp"
+        android:left="1.8dp"
+        android:right="1.8dp"
+        android:top="1.8dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="20.5dp" />
+            <gradient
+                android:angle="315"
+                android:startColor="#0A1A68"
+                android:centerColor="#070E42"
+                android:endColor="#290D68"
+                android:type="linear" />
+        </shape>
+    </item>
+    <!-- Ambient electric-blue lighting bloom behind illustration -->
+    <item
+        android:bottom="1.8dp"
+        android:left="1.8dp"
+        android:right="1.8dp"
+        android:top="1.8dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="20.5dp" />
+            <gradient
+                android:centerX="0.76"
+                android:centerY="0.45"
+                android:gradientRadius="140dp"
+                android:startColor="#4A00D4FF"
+                android:centerColor="#227C3AED"
+                android:endColor="#00000000"
+                android:type="radial" />
+        </shape>
+    </item>
+</layer-list>

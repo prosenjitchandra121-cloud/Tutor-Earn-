@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Golden orbit accent ring behind emblem -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M24,62 C26,75 40,81 55,78 C71,75 83,63 82,51"
+        android:strokeWidth="3.2"
+        android:strokeColor="#FBBF24"
+        android:strokeLineCap="round" />
+
+    <!-- Open book base (deep blue cover) -->
+    <path
+        android:fillColor="#1D4ED8"
+        android:pathData="M27,61 L54,67 L81,61 L78,74 L54,80 L30,74 Z" />
+
+    <!-- Open book white pages -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,58 C38,56 46,58 54,63 C62,58 70,56 78,58 L77,70 C69,68 61,70 54,75 C47,70 39,68 31,70 Z" />
+
+    <!-- Book center fold -->
+    <path
+        android:fillColor="#DBEAFE"
+        android:pathData="M53,63 L55,63 L55,75 L53,75 Z" />
+
+    <!-- Graduation cap crown base -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M37,43 L37,51 C37,55 45,58 54,58 C63,58 71,55 71,51 L71,43 Z" />
+
+    <!-- Graduation cap mortarboard top -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M54,25 L83,38 L54,51 L25,38 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M54,27 L79,38 L54,49 L29,38 Z"
+        android:fillAlpha="0.18" />
+
+    <!-- Tassel cord & drop -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,38 L76,43 L76,54"
+        android:strokeWidth="2.2"
+        android:strokeColor="#FACC15"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M74,53 L78,53 L79,60 L73,60 Z" />
+
+    <!-- Golden coin badge -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M54,47 A11.5,11.5 0 1,1 53.99,47 Z" />
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M54,49.5 A9,9 0 1,1 53.99,49.5 Z" />
+
+    <!-- Star inside coin -->
+    <path
+        android:fillColor="#FFFBEB"
+        android:pathData="M54,52.2 L55.8,56 L60,56.5 L56.9,59.4 L57.7,63.5 L54,61.5 L50.3,63.5 L51.1,59.4 L48,56.5 L52.2,56 Z" />
+
+</vector>
