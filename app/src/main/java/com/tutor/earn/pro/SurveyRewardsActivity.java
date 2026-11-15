@@ -1,4 +1,4 @@
-package com.example;
+package com.tutor.earn.pro;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -27,7 +27,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.databinding.ActivitySurveyRewardsBinding;
+import com.tutor.earn.pro.databinding.ActivitySurveyRewardsBinding;
 
 import java.util.UUID;
 

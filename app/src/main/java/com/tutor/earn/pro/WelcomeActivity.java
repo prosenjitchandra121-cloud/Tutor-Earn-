@@ -1,4 +1,4 @@
-package com.example;
+package com.tutor.earn.pro;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -26,7 +26,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.databinding.ActivityWelcomeBinding;
+import com.tutor.earn.pro.databinding.ActivityWelcomeBinding;
 
 /**
  * Initial Welcome / Landing Screen for Tutor Earn.

@@ -1,4 +1,4 @@
-package com.example;
+package com.tutor.earn.pro;
 
 import android.content.Context;
 import android.content.SharedPreferences;

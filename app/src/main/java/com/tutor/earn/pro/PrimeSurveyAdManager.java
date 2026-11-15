@@ -1,4 +1,4 @@
-package com.example;
+package com.tutor.earn.pro;
 
 import android.app.Activity;
 import android.content.Context;

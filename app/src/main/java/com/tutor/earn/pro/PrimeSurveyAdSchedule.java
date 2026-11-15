@@ -1,4 +1,4 @@
-package com.example;
+package com.tutor.earn.pro;
 
 /**
  * Defines the exact alternating AdMob advertisement schedule for Prime Survey:

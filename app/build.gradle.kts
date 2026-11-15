@@ -27,11 +27,11 @@ val admobRewardedSecret = readAppSecret("ADMOB_REWARDED_AD_UNIT_ID")
 val admobSurveyRewardsSecret = readAppSecret("ADMOB_SURVEY_REWARDS_AD_UNIT_ID")
 
 android {
-  namespace = "com.example"
+  namespace = "com.tutor.earn.pro"
   compileSdk { version = release(36) { minorApiLevel = 1 } }
 
   defaultConfig {
-    applicationId = "com.aistudio.tutorearn.vrmkqp"
+    applicationId = "com.tutor.earn.pro"
     minSdk = 23
     targetSdk = 36
     versionCode = 2
@@ -156,6 +156,6 @@ dependencies {
 }
 
 val googleServicesFile = file("google-services.json")
-if (googleServicesFile.exists() && googleServicesFile.readText().contains("com.aistudio.tutorearn.vrmkqp")) {
+if (googleServicesFile.exists() && googleServicesFile.readText().contains("com.tutor.earn.pro")) {
   apply(plugin = "com.google.gms.google-services")
 }

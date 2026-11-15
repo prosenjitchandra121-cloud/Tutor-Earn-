@@ -1,4 +1,4 @@
-package com.example;
+package com.tutor.earn.pro;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -30,7 +30,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.databinding.ActivityHomeBinding;
+import com.tutor.earn.pro.databinding.ActivityHomeBinding;
 import com.google.android.material.card.MaterialCardView;
 
 /**

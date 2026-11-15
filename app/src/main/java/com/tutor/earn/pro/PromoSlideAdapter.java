@@ -1,4 +1,4 @@
-package com.example;
+package com.tutor.earn.pro;
 
 import android.content.Context;
 import android.text.SpannableString;
@@ -13,7 +13,7 @@ import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.databinding.ItemPromoSlideBinding;
+import com.tutor.earn.pro.databinding.ItemPromoSlideBinding;
 
 /**
  * RecyclerView adapter backing the infinite-looping 3-slide promotional banner carousel.
